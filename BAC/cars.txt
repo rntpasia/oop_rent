@@ -1,0 +1,5 @@
+SDJ234###Toyota###Hiace###White###2000
+SDJ234###Honda###Civic###White###2000
+SDJ234###Mitsubishi###Montero###Black###2000
+SDJ234###Ford###Raptor###Gray###2000
+SDJ234###Toyota###Vios###Gray###2000

@@ -51,9 +51,7 @@ public class RegisterMain extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl = new javax.swing.JTable();
         addbtn = new javax.swing.JButton();
-        editbtn = new javax.swing.JButton();
         rembtn = new javax.swing.JButton();
-        finalbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -173,27 +171,11 @@ public class RegisterMain extends javax.swing.JFrame {
             }
         });
 
-        editbtn.setFont(new java.awt.Font("Ebrima", 0, 12)); // NOI18N
-        editbtn.setText("Edit Car");
-        editbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editbtnActionPerformed(evt);
-            }
-        });
-
         rembtn.setFont(new java.awt.Font("Ebrima", 0, 12)); // NOI18N
         rembtn.setText("Remove Car");
         rembtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rembtnActionPerformed(evt);
-            }
-        });
-
-        finalbtn.setFont(new java.awt.Font("Ebrima", 0, 12)); // NOI18N
-        finalbtn.setText("Finalize");
-        finalbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finalbtnActionPerformed(evt);
             }
         });
 
@@ -206,20 +188,15 @@ public class RegisterMain extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addComponent(rembtn)
-                                .addGap(30, 30, 30)
-                                .addComponent(editbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)))
                 .addGap(20, 20, 20))
             .addGroup(layout.createSequentialGroup()
-                .addGap(307, 307, 307)
-                .addComponent(finalbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85)
+                .addComponent(addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(rembtn)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -231,14 +208,11 @@ public class RegisterMain extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addbtn)
-                    .addComponent(editbtn)
                     .addComponent(rembtn))
-                .addGap(28, 28, 28)
-                .addComponent(finalbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                .addGap(22, 22, 22))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         pack();
@@ -299,10 +273,6 @@ public class RegisterMain extends javax.swing.JFrame {
 
     }                                      
 
-    private void editbtnActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        // TODO add your handling code here:
-    }                                       
-
     private void rembtnActionPerformed(java.awt.event.ActionEvent evt) {                                       
         // TODO add your handling code here:
         
@@ -344,10 +314,6 @@ public class RegisterMain extends javax.swing.JFrame {
             updateProperties(rep);
             
     }                                      
-
-    private void finalbtnActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-    }                                        
 
     private void tblMouseClicked(java.awt.event.MouseEvent evt) {                                 
         // TODO add your handling code here:
@@ -414,8 +380,6 @@ public class RegisterMain extends javax.swing.JFrame {
     private javax.swing.JButton addbtn;
     private javax.swing.JTextField brandfield;
     private javax.swing.JTextField descfield;
-    private javax.swing.JButton editbtn;
-    private javax.swing.JButton finalbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

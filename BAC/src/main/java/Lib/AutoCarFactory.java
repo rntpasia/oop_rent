@@ -10,9 +10,9 @@ package Lib;
  */
 public class AutoCarFactory implements ICar{
     @Override
-    public Car createCar(String plateNum, String brand, String model, String description, double price) {
+    public Car createCar(String plateNum, String brand, String model, String description, String transmission, double price) {
         double newPrice = additionalPrice() + price;
-        return new Car(plateNum, brand, model, description, newPrice);
+        return new Car(plateNum, brand, model, description, transmission, newPrice);
     }
     @Override
     public double additionalPrice(){

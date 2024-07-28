@@ -14,7 +14,7 @@ import javax.swing.table.AbstractTableModel;
  */
 public class CarTable extends AbstractTableModel implements ITable{
     private final ArrayList<CarRep> reps;
-    private final String[] colNames = {"Plate#", "Brand", "Model", "Description", "Availability", "Base Price"};
+    private final String[] colNames = {"Plate#", "Brand", "Model", "Description", "Transmission", "Availability", "Base Price"};
 
     public CarTable (ArrayList<CarRep> reps) {
         this.reps = reps;
@@ -55,11 +55,14 @@ public class CarTable extends AbstractTableModel implements ITable{
                 
                 case 3:
                     return cr.getCar().getDescription();
-                
+                    
                 case 4:
+                    return cr.getCar().geTrans();
+                    
+                case 5:
                     return cr.isAvailable() ? "Available" : "Rented";
                 
-                case 5:
+                case 6:
                     return cr.getCar().getPrice();
                 
                 default:

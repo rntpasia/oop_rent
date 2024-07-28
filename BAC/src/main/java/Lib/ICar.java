@@ -9,6 +9,6 @@ package Lib;
  * @author anyadanielle
  */
 public interface ICar {
-     Car createCar(String plateNum, String brand, String model, String description, double price);
+     Car createCar(String plateNum, String brand, String model, String description, String transmission, double price);
      double additionalPrice();
 }

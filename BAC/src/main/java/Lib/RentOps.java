@@ -30,7 +30,7 @@ public class RentOps {
     public static RentOps getInstance(FleetInventory carInventory) {
         if (instance == null) {
             instance = new RentOps();
-            instance.fetchFromDisk(carInventory);
+            instance.readFile(carInventory);
         }
         return instance;
     }
@@ -116,7 +116,7 @@ public class RentOps {
     }
 
     
-    public void fetchFromDisk(FleetInventory f) {
+    public void readFile(FleetInventory f) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filename));
 
@@ -143,7 +143,7 @@ public class RentOps {
     }
 
     
-    public void saveToDisk() {
+    public void writeFile() {
         try {
             try (FileWriter fileWriter = new FileWriter(filename)) {
                 StringBuilder toWrite = new StringBuilder();

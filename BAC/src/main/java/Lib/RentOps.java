@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class RentOps {
     
-    private final String filename = "rentals.txt";
+    private String filename = "rentals.txt";
     private static RentOps instance;
 
     
@@ -36,13 +36,13 @@ public class RentOps {
     }
 
    
-    public boolean isCarAvailable(Car car, LocalDate startDate, LocalDate endDate) {
+    public boolean isCarAvailable(Car car, LocalDate startDate, LocalDate lastDate) {
         if (car == null) {
             return false;
         }
         for (Rent r : rent) {
             if ((r.getCar().getPlateNum() == null ? car.getPlateNum() == null : r.getCar().getPlateNum().equals(car.getPlateNum()))
-                    && (startDate.isBefore(r.getLastDate()) && endDate.isAfter(r.getStartDate()))) {
+                    && (startDate.isBefore(r.getLastDate()) && lastDate.isAfter(r.getStartDate()))) {
                 return false;
             }
         }

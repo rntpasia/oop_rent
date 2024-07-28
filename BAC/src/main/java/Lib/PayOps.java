@@ -75,12 +75,13 @@ public class PayOps {
                     String brand = line[1]; 
                     String model = line[2]; 
                     String description = line[3]; 
-                    double price = Double.parseDouble(line[4]); 
-                    String name = line[5];
-                    String phoneNum = line[6]; 
-                    String payMethod = line[7];
+                    double price = Double.parseDouble(line[4]);
+                    String transmission = line[5]; 
+                    String name = line[6];
+                    String phoneNum = line[7]; 
+                    String payMethod = line[8];
                     
-                    Car c = new Car(plateNum, brand, model, description, price);
+                    Car c = new Car(plateNum, brand, model, description, transmission, price);
                     pay.add(new Payment (line[5], line[6], line[7]));
                     
                 } catch (Exception e) { 

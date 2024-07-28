@@ -18,7 +18,7 @@ import java.io.IOException;
 public class PayOps {
     private String filename = "PayRecord.txt";
     private PayOps instance = null;
-    private ArrayList<Payment> pay;
+    public ArrayList<Payment> pay;
 
     private PayOps() {
         pay = new ArrayList<>();

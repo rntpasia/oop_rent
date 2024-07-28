@@ -20,26 +20,11 @@ public class Car {
     
 
     public Car(String plateNum, String brand, String model, String description, double price) {
-        this.plateNum = generateRandomPlateNumber();
+        this.plateNum = plateNum;
         this.description = description;
         this.brand = brand;
         this.model = model;
         this.price = price;
-    }
-    
-     private static String generateRandomPlateNumber() {
-        Random r = new Random();
-        StringBuilder sb = new StringBuilder();
-        
-        for (int i = 0; i < 3; i++) {
-            char randomChar = (char) (r.nextInt(26) + 'A');
-            sb.append(randomChar);
-        }
-        
-        for (int i = 0; i < 3; i++) {
-            sb.append(r.nextInt(10));
-        }
-        return sb.toString();
     }
 
     public void setDescription(String description) {
@@ -70,7 +55,4 @@ public class Car {
         return price;
     }
 
-
-   
-    
 }

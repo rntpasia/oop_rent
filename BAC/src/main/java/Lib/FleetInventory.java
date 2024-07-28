@@ -88,7 +88,8 @@ public class FleetInventory {
                                 lineComponents[1],//brand
                                 lineComponents[2],//model
                                 lineComponents[3],//description
-                                Double.parseDouble(lineComponents[4])//price
+                                lineComponents[4],//transmission
+                                Double.parseDouble(lineComponents[5])//price
                         ));
             }
         } catch (IOException | NumberFormatException e) {
@@ -105,6 +106,7 @@ public class FleetInventory {
                         .append(c.getBrand()).append("###")
                         .append(c.getModel()).append("###")
                         .append(c.getDescription()).append("###")
+                        .append(c.geTrans()).append("###")
                         .append(c.getPrice()).append("\n");
             }
             fw.write(write.toString());

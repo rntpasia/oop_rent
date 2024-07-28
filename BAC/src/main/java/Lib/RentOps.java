@@ -74,9 +74,9 @@ public class RentOps {
     }
 
     
-    public boolean RentCar(Car car, LocalDate startDate, LocalDate endDate) {
-        if (isCarAvailable(car, startDate, endDate)) {
-            Rent r = new Rent(car, startDate, endDate);
+    public boolean RentCar(Car car, LocalDate startDate, LocalDate lastDate) {
+        if (isCarAvailable(car, startDate, lastDate)) {
+            Rent r = new Rent(car, startDate, lastDate);
             System.out.println("Added rental");
             rent.add(r);
             return true;

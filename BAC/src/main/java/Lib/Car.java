@@ -17,13 +17,15 @@ public class Car {
     private String brand;
     private String model;
     private double price;
+    private String transmission;
     
 
-    public Car(String plateNum, String brand, String model, String description, double price) {
+    public Car(String plateNum, String brand, String model, String description, String transmission, double price) {
         this.plateNum = plateNum;
         this.description = description;
         this.brand = brand;
         this.model = model;
+        this.transmission = transmission;
         this.price = price;
     }
 
@@ -53,6 +55,10 @@ public class Car {
 
     public double getPrice() {
         return price;
+    }
+
+    public String geTrans(){
+        return transmission;
     }
 
 }
